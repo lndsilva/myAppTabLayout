@@ -19,9 +19,9 @@ public class PassaroFragment extends Fragment {
     ListView listaPassaros;
 
     //Criando dados para lista de pássaros fake
-    String nomePassaros[] = {"Joseph", "Bird", "Michael", "Antony", "Peker", "Linconl"};
+    String nomePassaros[] = {"Joseph", "Bird", "Michael", "Antony", "Peker", "Lincoln"};
     int imagemPassaros[] = {R.drawable.joseph, R.drawable.bird, R.drawable.michael,
-            R.drawable.antony, R.drawable.peker, R.drawable.linconl};
+            R.drawable.antony, R.drawable.peker, R.drawable.lincoln};
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,6 +31,9 @@ public class PassaroFragment extends Fragment {
         listaPassaros = view.findViewById(R.id.listaPassaros);
 
         AdapterPassaro adapterPassaro = new AdapterPassaro();
+
+        listaPassaros.setDivider(null);
+        listaPassaros.setDividerHeight(0);
 
         listaPassaros.setAdapter(adapterPassaro);
 
